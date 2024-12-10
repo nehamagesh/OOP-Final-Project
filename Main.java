@@ -33,6 +33,9 @@ public class Main {
                         spreadsheet.addCategory(categoryIdCounter++, categoryName);
                         break;
                     case 2:
+                        if(spreadsheet.numCategories() == 0){
+                            System.out.println("No categories. Add one first");
+                        }
                         System.out.print("Enter item name: ");
                         String name = scanner.nextLine();
                         System.out.println("Available categories:");
@@ -80,6 +83,9 @@ public class Main {
                         spreadsheet.addItem(itemIdCounter++, name, selectedCategory, cost);
                         break;
                     case 3:
+                        if(spreadsheet.numItems() == 0){
+                            System.out.println("No items. Add one first");
+                        }
                         System.out.println("Current items:");
                         spreadsheet.viewItems();
 
@@ -105,6 +111,9 @@ public class Main {
                         spreadsheet.removeItem(removeId);
                         break;
                     case 4:
+                        if(spreadsheet.numItems() == 0){
+                            System.out.println("No items. Add one first");
+                        }
                         System.out.println("Current items:");
                         spreadsheet.viewItems();
 
@@ -140,7 +149,7 @@ public class Main {
                         while (!validCategory) {
                             try {
                                 System.out.print("Enter the ID of the category you would like to switch to. If you would not like" +
-                                        "to switch, enter the same ID: ");
+                                        " to switch, enter the same ID: ");
                                 int catAmount = spreadsheet.numCategories();
                                 int newCategoryId = scanner.nextInt();
                                 scanner.nextLine();
