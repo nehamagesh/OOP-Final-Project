@@ -35,6 +35,7 @@ public class Main {
                     case 2:
                         if(spreadsheet.numCategories() == 0){
                             System.out.println("No categories. Add one first");
+                            break;
                         }
                         System.out.print("Enter item name: ");
                         String name = scanner.nextLine();
@@ -85,6 +86,7 @@ public class Main {
                     case 3:
                         if(spreadsheet.numItems() == 0){
                             System.out.println("No items. Add one first");
+                            break;
                         }
                         System.out.println("Current items:");
                         spreadsheet.viewItems();
@@ -113,6 +115,7 @@ public class Main {
                     case 4:
                         if(spreadsheet.numItems() == 0){
                             System.out.println("No items. Add one first");
+                            break;
                         }
                         System.out.println("Current items:");
                         spreadsheet.viewItems();
