@@ -17,6 +17,6 @@ class Category {
 
     @Override
     public String toString() {
-        return "CategoryID: " + categoryId + ", Name: " + categoryName;
+        return String.format("| %-9d | %-20s |", categoryId, categoryName);
     }
 }

@@ -57,10 +57,10 @@ public class Main {
                                     }
                                 }
                                 if (!validCategory) {
-                                    System.out.println("No category found with the given ID. Please enter a valid category ID.");
+                                    System.out.println("Please enter a valid category ID.");
                                 }
                             } catch (Exception e) {
-                                System.out.println("Please enter a valid number for the category ID.");
+                                System.out.println("Please enter a valid category ID.");
                                 scanner.nextLine();
                             }
                         }
@@ -74,7 +74,7 @@ public class Main {
                                 if (cost >= 0) {
                                     validCost = true;
                                 } else {
-                                    System.out.println("Cost must be a non-negative number.");
+                                    System.out.println("Please enter a valid number for the cost.");
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Please enter a valid number for the cost.");
@@ -103,10 +103,10 @@ public class Main {
                                 if (removeId > 0 && removeId <= spreadsheet.numItems()) {
                                     validRemoveId = true;
                                 } else {
-                                    System.out.println("Invalid Item ID. Please enter a valid item ID.");
+                                    System.out.println("Please enter a valid item ID.");
                                 }
                             } catch (InputMismatchException e) {
-                                System.out.println("Please enter a valid number for the item ID.");
+                                System.out.println("Please enter a valid item ID.");
                                 scanner.nextLine();
                             }
                         }
@@ -132,10 +132,10 @@ public class Main {
                                 if (editId > 0 && editId <= spreadsheet.numItems()) {
                                     validItem = true;
                                 } else {
-                                    System.out.println("Invalid Item ID. Please enter a valid item ID.");
+                                    System.out.println("Please enter a valid item ID.");
                                 }
                             } catch (Exception e) {
-                                System.out.println("Please enter a valid number for the item ID.");
+                                System.out.println("Please enter a valid item ID.");
                                 scanner.nextLine();
                             }
                         }
@@ -169,7 +169,7 @@ public class Main {
                                     System.out.println("Please enter a valid category ID.");
                                 }
                             } catch (InputMismatchException e) {
-                                System.out.println("Please enter a valid number for the category ID.");
+                                System.out.println("Please enter a valid category ID.");
                                 scanner.nextLine();
                             }
                         }
@@ -185,7 +185,7 @@ public class Main {
                                 if (newCost >= 0) {
                                     validCost = true;
                                 } else {
-                                    System.out.println("Cost must be a valid number.");
+                                    System.out.println("Please enter a valid number for the cost.");
                                 }
                             } catch (Exception e) {
                                 System.out.println("Please enter a valid number for the cost.");
