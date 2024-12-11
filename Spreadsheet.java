@@ -27,7 +27,7 @@ class Spreadsheet {
         }
         Category newCategory = new Category(categoryId, categoryName);
         categories.add(newCategory);
-        categoryTotals.put(categoryId, 0f); // Initialize total for this category
+        categoryTotals.put(categoryId, 0f);
         System.out.println("Category added successfully.");
     }
 
@@ -65,7 +65,6 @@ class Spreadsheet {
         }
         for (Item item : items) {
             if (item.getItemId() == itemId) {
-                // Update category totals
                 categoryTotals.put(item.getCategory().getCategoryId(), categoryTotals.get(item.getCategory().getCategoryId()) - item.getCost());
                 item.setCategory(newCategory);
                 item.setCost(newCost);
@@ -139,12 +138,12 @@ class Spreadsheet {
             directory = home + "/Downloads/export_my_budget_report.txt";
         }
 
-        try (FileWriter writer = new FileWriter(directory)) {
-            writer.write("Expense Report:\n");
+        try (FileWriter w = new FileWriter(directory)) {
+            w.write("Expense Report:\n");
             for (Item item : items) {
-                writer.write(item.toString() + "\n");
+                w.write(item.toString() + "\n");
             }
-            writer.write("Report downloaded successfully.\n");
+            w.write("Report downloaded successfully.\n");
             System.out.println("Expense report exported to: " + directory);
         } catch (IOException e) {
             System.out.println("Error while exporting the report: " + e.getMessage());
