@@ -76,7 +76,7 @@ public class Main {
                                 } else {
                                     System.out.println("Please enter a valid number for the cost.");
                                 }
-                            } catch (InputMismatchException e) {
+                            } catch (Exception e) {
                                 System.out.println("Please enter a valid number for the cost.");
                                 scanner.nextLine();
                             }
@@ -105,7 +105,7 @@ public class Main {
                                 } else {
                                     System.out.println("Please enter a valid item ID.");
                                 }
-                            } catch (InputMismatchException e) {
+                            } catch (Exception e) {
                                 System.out.println("Please enter a valid item ID.");
                                 scanner.nextLine();
                             }
